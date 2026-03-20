@@ -109,7 +109,7 @@ Les fonctionnalités suivantes ont été testées :
 ### 1. Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/asmae202/Blog-full-stack-Laravel.git
 cd blog-laravel
 composer install
 npm install
