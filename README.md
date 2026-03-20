@@ -1,59 +1,194 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📘 Blog Collaboratif - Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 📌 Description
 
-## About Laravel
+Ce projet consiste à développer une application web de type **blog collaboratif** en utilisant le framework **Laravel**, suivant l’architecture **MVC (Modèle - Vue - Contrôleur)**.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+L’application permet aux utilisateurs de créer, consulter, modifier et supprimer des articles, ainsi que d’interagir via un système de commentaires.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🎯 Objectifs du projet
 
-## Learning Laravel
+* Comprendre le fonctionnement d’une application web avec Laravel
+* Mettre en place un système d’authentification sécurisé
+* Implémenter les opérations CRUD (Create, Read, Update, Delete)
+* Gérer les relations entre les données (User, Article, Comment)
+* Assurer la sécurité avec des règles d’accès (Policies)
+* Concevoir une interface utilisateur simple et ergonomique
+* Appliquer les bonnes pratiques de développement web
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🛠️ Technologies utilisées
 
-## Laravel Sponsors
+### Backend
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+* Laravel
+* PHP
+* MySQL
+* Laravel Breeze (authentification)
+* Eloquent ORM
 
-### Premium Partners
+### Frontend
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+* Blade (moteur de templates Laravel)
+* Bootstrap 5
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## ⚙️ Fonctionnalités principales
 
-## Code of Conduct
+### 🔐 Authentification
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* Inscription
+* Connexion
+* Déconnexion
+* Accès protégé via middleware
 
-## Security Vulnerabilities
+### 📝 Gestion des articles
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* Création d’un article
+* Affichage de la liste des articles
+* Consultation du détail d’un article
+* Modification d’un article
+* Suppression d’un article
 
-## License
+### 💬 Système de commentaires
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* Ajouter un commentaire
+* Afficher les commentaires liés à un article
+
+### 🔒 Sécurité
+
+* Accès limité aux utilisateurs connectés
+* Utilisation des **Policies**
+* Un utilisateur peut modifier/supprimer uniquement ses propres articles
+
+---
+
+## 🗂️ Architecture du projet
+
+Le projet suit l’architecture **MVC** :
+
+* **Models** : gestion des données (Article, Comment, User)
+* **Views** : interface utilisateur avec Blade
+* **Controllers** : logique métier
+
+Relations principales :
+
+* Un utilisateur possède plusieurs articles
+* Un article possède plusieurs commentaires
+* Un commentaire appartient à un utilisateur et à un article
+
+---
+
+## 🖥️ Interface utilisateur
+
+* Layout principal avec navigation
+* Pages articles (liste, création, modification, détail)
+* Dashboard utilisateur
+* Messages de succès et erreurs
+* Design responsive avec Bootstrap
+
+---
+
+## 🧪 Tests et validation
+
+Les fonctionnalités suivantes ont été testées :
+
+* Authentification (login / register)
+* CRUD des articles
+* Ajout de commentaires
+* Sécurité des accès (Policies)
+
+---
+
+## 🚀 Lancement du projet
+
+### 1. Installation
+
+```bash
+git clone <repository-url>
+cd blog-laravel
+composer install
+npm install
+```
+
+### 2. Configuration
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Configurer la base de données dans `.env`
+
+### 3. Migration
+
+```bash
+php artisan migrate
+```
+
+### 4. Lancement
+
+```bash
+php artisan serve
+npm run dev
+```
+
+---
+
+## 🌐 Accès à l'application
+
+* Accueil : `/`
+* Inscription : `/register`
+* Connexion : `/login`
+* Dashboard : `/dashboard`
+* Articles : `/articles`
+
+---
+
+## 📸 Aperçu du projet
+
+
+* Page register:
+ <img width="945" height="538" alt="image" src="https://github.com/user-attachments/assets/11e3e8ca-54bb-4b0a-b71b-bf382996a432" />
+
+* Login:
+ <img width="945" height="809" alt="image" src="https://github.com/user-attachments/assets/e7e01d29-eb42-4f2a-9567-b7eb743d2297" />
+
+* Liste des articles
+<img width="945" height="343" alt="image" src="https://github.com/user-attachments/assets/b7c93a12-30f6-4489-88f3-f2df881a4fcb" />
+
+
+ <img width="945" height="412" alt="image" src="https://github.com/user-attachments/assets/9d203dfe-5d98-4210-9d54-253bbb492e76" />
+
+Creer un article:
+<img width="945" height="386" alt="image" src="https://github.com/user-attachments/assets/3ef07bd6-9ceb-42db-98ed-c9a10cb2ffd8" />
+
+* Détail d’un article
+<img width="945" height="512" alt="image" src="https://github.com/user-attachments/assets/86245b76-9b58-4eae-b72d-1de566f7b52f" />
+ 
+
+* Ajout de commentaire
+
+<img width="945" height="558" alt="image" src="https://github.com/user-attachments/assets/7fcbb353-01dd-4ec9-8bd9-d2927e2aa0d0" />
+
+
+---
+
+## ✅ Résultat
+
+Ce projet permet de :
+
+* Maîtriser Laravel et son architecture MVC
+* Comprendre la gestion des utilisateurs et des permissions
+* Construire une application web complète et sécurisée
+
+---
+
+## 📎 Auteur
+
+Projet réalisé dans le cadre d’un travail académique.
+
